@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <link rel="stylesheet" href="projet1.css">
+    <script type="text/javascript" src="projet1.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2> Contactez-vous</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required oninput="isAlpha()">
+                <span class="error-msg" id="nom-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required oninput="isAlpha()">
+                <span class="error-msg" id="prenom-error"></span>  
+               
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="text" id="email" name="email" required onblur="isEmail(this.value)" oninput="isEmail(this.value)" >
+                <span class="error-msg" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="motpasse">Mot de passe :</label>
+                <input type="password" id="motpasse" name="motpasse" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmpass">Confirmer le mot de passe :</label>
+                <input type="password" id="confirmpass" name="confirmpass" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" required oninput="isNum()">
+                <span id="phone-error" class="error-msg">La valeur doit être numérique.</span>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Date de Naissance :</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="pays">Pays :</label>
+                <select id="pays" name="pays">
+                    <option value="">Choisir un pays</option>
+                    <option value="france">France</option>
+                    <option value="canada">Canada</option>
+                    <option value="etats-unis">Etats-Unis</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
